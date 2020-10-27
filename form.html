@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FORM</title>
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@500&display=swap');
+		body{
+			background-color: #F2F7FB;
+			padding: 30px 0 30px 0;
+		}
+		h2{
+			color: #2a2faf;
+		}
+		h2, p{
+			font-family: 'Poppins', sans-serif;
+		}
+		label{
+			font-family: 'Open Sans', sans-serif;
+		}
+		select{
+			width: 100%;
+			padding: 10px 20px;
+			margin: 8px 0;
+			display: block;
+			border: 1px solid #ccc;
+			box-sizing: border-box;
+			border-radius: 5px;
+			background: #fafafa;
+			color: #666;
+		}
+		input[type=submit]{
+			border-style: solid;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-left-width: 0;
+    border-bottom-width: 0;
+    color: #ffffff;
+    border-color: #0f52ba;
+    background-color: #0f52ba;
+    border-radius: 6px;
+    padding-top: 18px;
+    padding-right: 35px;
+    padding-bottom: 18px;
+    padding-left: 35px;
+    font-family: inherit;
+    font-weight: normal;
+    font-size: 15px;
+    font-size: 0.9375rem;
+    line-height: 1;
+    letter-spacing: 1px;
+		}
+		input[type=submit]:hover{
+			background-color: #d4af37;
+			cursor: pointer;
+		}
+		.form{
+			width: 50%;
+			margin: auto;
+			padding: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="form">
+	<h2> Request Estimate</h2>
+	<p>This is an estimation of services provided by Pristine hands cleaning services.</p>
+	</div>
+	<br>
+	<div class="form">
+    <form>
+    	<div>
+    	<label for="building-types">BUILDING TYPES</label>
+    	<select name="building-types" id="building-types">
+    		<option value="building-types">--Choose building type--</option>
+    		<option value="residential">Residential</option>
+    		<option value="commercial">Commercial</option>
+    	</select>
+        </div>
+        <br>
+        <div>
+        	<label for="residential-type">Residential Type</label>
+        	<select>
+        		<option>--Choose house type--</option>
+        		<option value="">One bedroom en-suite</option>
+        		<option>Self contain apartment</option>
+        		<option>2 bedroom en-suite flat</option>
+        		<option>3 bedroom en-suite flat</option>
+        		<option>3 bedroom en-suite house</option>
+        		<option>4 bedroom en-suite flat</option>
+        		<option>4 bedroom en-suite house</option>
+        		<option>5 bedroom en-suite flat</option>
+        		<option>5 bedroom en-suite house</option>
+        		<option>6 bedroom en-suite house</option>
+        		<option>7 bedroom en-suite house</option>
+        		<option>8 bedroom en-suite house</option>
+        		<option>9 bedroom en-suite house</option>
+        		<option>10 bedroom en-suite house</option>
+        	</select>
+        </div>
+        <br>
+        <div>
+        	<label for="commercial-type">Commercial Type</label>
+        	<select>
+        	<option>--Choose commercial type--</option>
+        	<option>Offices</option>
+        	<option>Warehouses</option>
+        	<option>Event centers</option>
+        	<option>Apartments</option>
+        	<option>Shops</option>
+        	<option>Estate surroundings</option>
+        </select>
+        </div>
+        <br>
+        <div>
+        	<label for="services">SERVICE REQUIRED</label>
+        	<select>
+            <option>--Choose service required--</option>
+        	<option>Basic cleaning</option>
+        	<option>Deep cleaning</option>
+        	<option>Post construction / Change of tenancy</option>
+        	<option>Fumigation services</option>
+           </select>
+        </div>
+        <br>
+        <div>
+        	<label for="duration">DURATION</label>
+        	<select>
+        		<option>--Choose duration--</option>
+        		<option>One-off</option>
+        		<option>Bi-weekly</option>
+        		<option>Monthly</option>
+        		<option>Bi-monthly</option>
+        	</select>
+        </div>
+            <br><br>
+    <input type="submit" value="REQUEST ESTIMATE">
+    </form>
+</div>
+</body>
+</html>
