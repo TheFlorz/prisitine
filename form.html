@@ -17,7 +17,7 @@
 		label{
 			font-family: 'Open Sans', sans-serif;
 		}
-		select{
+		select,.ptotal{
 			width: 100%;
 			padding: 10px 20px;
 			margin: 8px 0;
@@ -27,6 +27,18 @@
 			border-radius: 5px;
 			background: #fafafa;
 			color: #666;
+		}
+		.ptotal{
+			border: 1px solid green;
+		}
+		.totaldiv{
+			margin-top: 15px;
+		}
+		input:focus{
+			outline: none;
+		}
+		select:focus{
+			outline: none;
 		}
 		input[type=submit]{
 			border-style: solid;
@@ -58,6 +70,9 @@
 			margin: auto;
 			padding: 10px;
 		}
+		.totaldiv,.php{
+			display: none;
+		}
 	</style>
 </head>
 <body>
@@ -67,74 +82,111 @@
 	</div>
 	<br>
 	<div class="form">
-    <form>
-    	<div>
-    	<label for="building-types">BUILDING TYPES</label>
-    	<select name="building-types" id="building-types">
-    		<option value="building-types">--Choose building type--</option>
-    		<option value="residential">Residential</option>
-    		<option value="commercial">Commercial</option>
-    	</select>
-        </div>
-        <br>
-        <div>
-        	<label for="residential-type">Residential Type</label>
-        	<select>
-        		<option>--Choose house type--</option>
-        		<option value="">One bedroom en-suite</option>
-        		<option>Self contain apartment</option>
-        		<option>2 bedroom en-suite flat</option>
-        		<option>3 bedroom en-suite flat</option>
-        		<option>3 bedroom en-suite house</option>
-        		<option>4 bedroom en-suite flat</option>
-        		<option>4 bedroom en-suite house</option>
-        		<option>5 bedroom en-suite flat</option>
-        		<option>5 bedroom en-suite house</option>
-        		<option>6 bedroom en-suite house</option>
-        		<option>7 bedroom en-suite house</option>
-        		<option>8 bedroom en-suite house</option>
-        		<option>9 bedroom en-suite house</option>
-        		<option>10 bedroom en-suite house</option>
-        	</select>
-        </div>
-        <br>
-        <div>
-        	<label for="commercial-type">Commercial Type</label>
-        	<select>
-        	<option>--Choose commercial type--</option>
-        	<option>Offices</option>
-        	<option>Warehouses</option>
-        	<option>Event centers</option>
-        	<option>Apartments</option>
-        	<option>Shops</option>
-        	<option>Estate surroundings</option>
-        </select>
-        </div>
-        <br>
-        <div>
-        	<label for="services">SERVICE REQUIRED</label>
-        	<select>
-            <option>--Choose service required--</option>
-        	<option>Basic cleaning</option>
-        	<option>Deep cleaning</option>
-        	<option>Post construction / Change of tenancy</option>
-        	<option>Fumigation services</option>
-           </select>
-        </div>
-        <br>
-        <div>
-        	<label for="duration">DURATION</label>
-        	<select>
-        		<option>--Choose duration--</option>
-        		<option>One-off</option>
-        		<option>Bi-weekly</option>
-        		<option>Monthly</option>
-        		<option>Bi-monthly</option>
-        	</select>
-        </div>
-            <br><br>
-    <input type="submit" value="REQUEST ESTIMATE">
-    </form>
-</div>
+		<form>
+			<div>
+				<label for="building-types">BUILDING TYPES</label>
+				<select class="ska" onchange="openup()" name="building-types" id="building-types">
+					<option value="building-types">--Choose building type--</option>
+					<option value="residential">Residential</option>
+					<option value="commercial">Commercial</option>
+				</select>
+			</div>
+			<br>
+			<div class="res">
+				<div>
+					<label for="residential-type">Residential Type</label>
+					<select class="housetype">
+						<option>--Choose house type--</option>
+						<option value="onebedsuite">One bedroom en-suite</option>
+						<option value="selfcon">Self contain apartment</option>
+						<option value="twobed">2 bedroom en-suite flat</option>
+						<option value="threebedflat">3 bedroom en-suite flat</option>
+						<option value="threebedhouse">3 bedroom en-suite house</option>
+						<option value="fourbedflat">4 bedroom en-suite flat</option>
+						<option value="fourbedhouse">4 bedroom en-suite house</option>
+						<option value="fivebedflat">5 bedroom en-suite flat</option>
+						<option value="fivebedhouse">5 bedroom en-suite house</option>
+						<option value="sixbedhouse">6 bedroom en-suite house</option>
+						<option value="sevenbedhouse">7 bedroom en-suite house</option>
+						<option value="eightbedhouse">8 bedroom en-suite house</option>
+						<option value="ninebedhouse">9 bedroom en-suite house</option>
+						<option value="tenbedhouse">10 bedroom en-suite house</option>
+					</select>
+				</div>
+				
+				<br>
+				<div>
+					<label for="services">SERVICE REQUIRED</label>
+					<select class="service">
+					<option>--Choose service required--</option>
+					<option value="basic">Basic cleaning</option>
+					<option value="deep">Deep cleaning</option>
+					<option value="postconstruction">Post construction / Change of tenancy</option>
+					<option value="fumigation">Fumigation services</option>
+				</select>
+				</div>
+				<br>
+				<div>
+					<label for="duration">DURATION</label>
+					<select class="duration">
+						<option>--Choose duration--</option>
+						<option value="oneoff">One-off</option>
+						<option value="weekly">Weekly</option>
+						<option value="biweekly">Bi-weekly</option>
+						<option value="monthly">Monthly</option>
+						<option value="bimonthly">Bi-monthly</option>
+					</select>
+				</div>
+
+			</div>
+			<div class="com">
+				
+				<div>
+					<label for="commercial-type">Commercial Type</label>
+					<select>
+					<option>--Choose commercial type--</option>
+					<option>Offices</option>
+					<option>Warehouses</option>
+					<option>Event centers</option>
+					<option>Apartments</option>
+					<option>Shops</option>
+					<option>Estate surroundings</option>
+				</select>
+				</div>
+				<br>
+				<div>
+					<label for="services">SERVICE REQUIRED</label>
+					<select>
+					<option>--Choose service required--</option>
+					<option>Basic cleaning</option>
+					<option>Deep cleaning</option>
+					<option>Post construction / Change of tenancy</option>
+					<option>Fumigation services</option>
+				</select>
+				</div>
+				<br>
+				<div>
+					<label for="duration">DURATION</label>
+					<select>
+						<option>--Choose duration--</option>
+						<option>One-off</option>
+						<option>Bi-weekly</option>
+						<option>Monthly</option>
+						<option>Bi-monthly</option>
+					</select>
+				</div>
+			</div>
+			
+			<br><br>
+			<input type="submit" value="REQUEST ESTIMATE">
+            
+			<div class="totaldiv">
+				<label for="">Total</label>
+				<p class="ptotal">&#8358; <span class="total"></span> </p>
+			</div>
+		</form>
+	</div>
+	<div class="php"></div>
+ <script src="form.js"></script>
 </body>
 </html>
