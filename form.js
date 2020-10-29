@@ -10,16 +10,20 @@ let phpdiv = document.querySelector('.php')
 com.style.display = 'none'
 res.style.display = 'none'
 let form = document.querySelector('form')
+let btn = document.querySelector('btn')
 const openup = ()=>{
        
        if (ska.value === 'residential') {
            com.style.display = 'none'
            res.style.display = 'block'
+           btn.style.display = 'block'
+           
 
        }
        else if (ska.value === 'commercial') {
         com.style.display = 'block'
         res.style.display = 'none'
+        btn.style.display = 'none'
        }
 }
 
