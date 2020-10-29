@@ -11,20 +11,28 @@ com.style.display = 'none'
 res.style.display = 'none'
 let form = document.querySelector('form')
 let btn = document.querySelector('.btn')
+let text = document.querySelector('.text')
+let comtype = document.querySelector('.comtype')
 const openup = ()=>{
        
        if (ska.value === 'residential') {
            com.style.display = 'none'
            res.style.display = 'block'
            btn.style.display = 'block'
-           
+           text.style.display = 'none'
 
        }
        else if (ska.value === 'commercial') {
         com.style.display = 'block'
         res.style.display = 'none'
         btn.style.display = 'none'
+        text.style.display = 'none'
        }
+       else (comtype.value === 'offices', 'warehouses', 'eventcenters', 'shops' 'estate') {
+        com.style.display = 'none'
+        res.style.display = 'none'
+        btn.style.display = 'none'
+        text.style.display = 'display'
 }
 
 const over = {
