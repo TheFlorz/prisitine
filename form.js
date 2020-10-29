@@ -10,7 +10,7 @@ let phpdiv = document.querySelector('.php')
 com.style.display = 'none'
 res.style.display = 'none'
 let form = document.querySelector('form')
-let btn = document.querySelector('btn')
+let btn = document.querySelector('.btn')
 const openup = ()=>{
        
        if (ska.value === 'residential') {
