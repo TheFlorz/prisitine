@@ -23,7 +23,7 @@ const openup = ()=>{
        if (ska.value === 'residential') {
            com.style.display = 'none'
            res.style.display = 'block'
-           btn.style.display = 'block'
+           btn.style.display = 'none'
           contact.style.display = 'none'
 
        }
