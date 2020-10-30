@@ -11,7 +11,6 @@ com.style.display = 'none'
 res.style.display = 'none'
 let form = document.querySelector('form')
 let btn = document.querySelector('.btn')
-let btn = document.querySelector('.btn')
 let comtype = document.querySelector('.comtype')
 let contact = document.querySelector('.contact')
 
