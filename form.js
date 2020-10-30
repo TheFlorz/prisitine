@@ -13,10 +13,11 @@ let form = document.querySelector('form')
 let btn = document.querySelector('.btn')
 let btn = document.querySelector('.btn')
 let comtype = document.querySelector('.comtype')
-let text = document.querySelector('.text')
+let contact = document.querySelector('.contact')
 
-Function popUp = ()=>{
-   text.style.display = 'block'
+const popUp = ()=>{
+   
+   contact.style.display = 'block'
 }
 const openup = ()=>{
        
@@ -24,12 +25,14 @@ const openup = ()=>{
            com.style.display = 'none'
            res.style.display = 'block'
            btn.style.display = 'none'
+          contact.style.display = 'none'
 
        }
        else if (ska.value === 'commercial') {
         com.style.display = 'block'
         res.style.display = 'none'
         btn.style.display = 'none'
+          contact.style.display = 'none'
        }
        
 }
