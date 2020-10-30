@@ -17,6 +17,7 @@ let contact = document.querySelector('.contact')
 const popUp = ()=>{
    
    contact.style.display = 'block'
+   totaldiv.style.display = 'none'
 }
 const openup = ()=>{
        
@@ -32,6 +33,7 @@ const openup = ()=>{
         res.style.display = 'none'
         btn.style.display = 'none'
           contact.style.display = 'none'
+          totaldiv.style.display = 'none'
        }
        
 }
