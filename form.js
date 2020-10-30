@@ -15,7 +15,7 @@ let btn = document.querySelector('.btn')
 let comtype = document.querySelector('.comtype')
 let text = document.querySelector('.text')
 
-Function openup = ()=>{
+Function popUp = ()=>{
    text.style.display = 'block'
 }
 const openup = ()=>{
