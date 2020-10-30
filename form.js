@@ -11,7 +11,13 @@ com.style.display = 'none'
 res.style.display = 'none'
 let form = document.querySelector('form')
 let btn = document.querySelector('.btn')
+let btn = document.querySelector('.btn')
+let comtype = document.querySelector('.comtype')
+let text = document.querySelector('.text')
 
+Function openup = ()=>{
+   text.style.display = 'block'
+}
 const openup = ()=>{
        
        if (ska.value === 'residential') {
