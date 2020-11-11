@@ -13,6 +13,9 @@ let form = document.querySelector('form')
 let btn = document.querySelector('.btn')
 let comtype = document.querySelector('.comtype')
 let contact = document.querySelector('.contact')
+let fum = document.querySelector('.fum')
+let dura = document.querySelector('.dura')
+let fumtype = document.querySelector('.fumtype')
 
 const popUp = ()=>{
    
@@ -39,6 +42,20 @@ const openup = ()=>{
        }
 }
 
+const cutout = ()=>{
+       
+    if (service.value === 'fumigation') {
+        dura.style.display = 'none'
+        fum.style.display = 'block'
+        
+
+    }
+    else  {
+        dura.style.display = 'block'
+        fum.style.display = 'none'
+    }
+}
+
 const over = {
     onebedsuite:{
         basic:{
@@ -63,13 +80,11 @@ const over = {
             bimonthly: '10,000'
         },
         fumigation:{
-            oneoff:   '5,000',
-            weekly:   '5,000',
-            biweekly: '5,000',
-            monthly:  '5,000',
-            bimonthly: '5,000'
+            chemical: '5,000',
+            smoke: '10,000'
         }
     },
+
     selfcon:{
         basic:{
             oneoff: '10,000',
@@ -93,11 +108,8 @@ const over = {
             bimonthly: '15,000'
         },
         fumigation:{
-            oneoff: '8,000',
-            weekly: '8,000',
-            biweekly: '8,000',
-            monthly: '8,000',
-            bimonthly: '8,000'
+            chemical:  '8,000',
+            smoke:  '15,000'
         }
     },
     twobed:{
@@ -123,11 +135,8 @@ const over = {
             bimonthly: '25,000'
         },
         fumigation:{
-            oneoff: '10,000',
-            weekly: '10,000',
-            biweekly: '10,000',
-            monthly: '10,000',
-            bimonthly: '10,000'
+            chemical: '10,000',
+            smoke:  '20,000'
         }
     },
     threebedflat:{
@@ -153,11 +162,8 @@ const over = {
             bimonthly: '40,000'
         },
         fumigation:{
-            oneoff: '16,000',
-            weekly: '16,000',
-            biweekly: '16,000',
-            monthly: '16,000',
-            bimonthly: '16,000'
+            chemical:   '15,000',
+            smoke:   '25,000'
         }
     },
     threebedhouse:{
@@ -183,11 +189,8 @@ const over = {
             bimonthly: '50,000'
         },
         fumigation:{
-            oneoff: '20,000',
-            weekly: '20,000',
-            biweekly: '20,000',
-            monthly: '20,000',
-            bimonthly: '20,000'
+            chemical:   '20,000',
+            smoke:   '35,000'
         }
     },
     fourbedflat:{
@@ -213,11 +216,8 @@ const over = {
             bimonthly: '50,000'
         },
         fumigation:{
-            oneoff: '20,000',
-            weekly: '20,000',
-            biweekly: '20,000',
-            monthly: '20,000',
-            bimonthly: '20,000'
+            chemical:   '20,000',
+            smoke:   '45,000'
         }
     },
     fourbedhouse:{
@@ -243,11 +243,8 @@ const over = {
             bimonthly: '70,000'
         },
         fumigation:{
-            oneoff: '25,000',
-            weekly: '25,000',
-            biweekly: '25,000',
-            monthly: '25,000',
-            bimonthly: '25,000'
+            chemical:   '25,000',
+            smoke:   '50,000'
         }
     },
     fivebedflat:{
@@ -273,11 +270,8 @@ const over = {
             bimonthly: '80,000'
         },
         fumigation:{
-            oneoff: '30,000',
-            weekly: '30,000',
-            biweekly: '30,000',
-            monthly: '30,000',
-            bimonthly: '30,000'
+            chemical:   '30,000',
+            smoke:   '60,000'
         }
     },
     fivebedhouse:{
@@ -303,11 +297,8 @@ const over = {
             bimonthly: '85,000'
         },
         fumigation:{
-            oneoff: '40,000',
-            weekly: '40,000',
-            biweekly: '40,000',
-            monthly: '40,000',
-            bimonthly: '40,000'
+            chemical:   '40,000',
+            smoke:   '70,000'
         }
     },
     sixbedhouse:{
@@ -333,11 +324,8 @@ const over = {
             bimonthly: '100,000'
         },
         fumigation:{
-            oneoff: '50,000',
-            weekly: '50,000',
-            biweekly: '50,000',
-            monthly: '50,000',
-            bimonthly: '50,000'
+            chemical:   '50,000',
+            smoke:   '80,000'
         }
     },
     sevenbedhouse:{
@@ -363,11 +351,8 @@ const over = {
             bimonthly: '110,000'
         },
         fumigation:{
-            oneoff: '65,000',
-            weekly: '65,000',
-            biweekly: '65,000',
-            monthly: '65,000',
-            bimonthly: '65,000'
+            chemical:   '65,000',
+            smoke:   '95,000'
         }
     },
     eightbedhouse:{
@@ -393,11 +378,8 @@ const over = {
             bimonthly: '150,000'
         },
         fumigation:{
-            oneoff: '80,000',
-            weekly: '80,000',
-            biweekly: '80,000',
-            monthly: '80,000',
-            bimonthly: '80,000'
+            chemical:   '80,000',
+            smoke:   '120,000'
         }
     },
     ninebedhouse:{
@@ -423,11 +405,8 @@ const over = {
             bimonthly: '220,000'
         },
         fumigation:{
-            oneoff: '95,000',
-            weekly: '95,000',
-            biweekly: '95,000',
-            monthly: '95,000',
-            bimonthly: '95,000'
+            chemical:   '95,000',
+            smoke:   '135,000'
         }
     },
     tenbedhouse:{
@@ -453,24 +432,33 @@ const over = {
             bimonthly: '250,000'
         },
         fumigation:{
-            oneoff: '105,000',
-            weekly: '105,000',
-            biweekly: '105,000',
-            monthly: '105,000',
-            bimonthly: '105,000'
+            chemical:   '105,000',
+            smoke:   '150,000'
         }
     },
 }
 
+
+
 form.addEventListener('submit',(e)=>{
     e.preventDefault()
 
-
+    if (service.value==='fumigation') {
+        console.log('hyyyyyyyyyyyyyyy')
+        let final = over[housetype.value][service.value][fumtype.value]
+        
+        total.innerHTML = final;
+        totaldiv.style.display='block';
+        phpdiv.style.display='block';
+        
+    }
     
-  
+  else{
     let final = over[housetype.value][service.value][duration.value]
     total.innerHTML = final;
     totaldiv.style.display='block';
     phpdiv.style.display='block';
+  }
+    
 
 })
