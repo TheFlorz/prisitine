@@ -17,25 +17,26 @@ let contact = document.querySelector('.contact')
 const popUp = ()=>{
    
    contact.style.display = 'block'
-   totaldiv.style.display = 'none'
+	totaldiv.style.display = 'none'
+	phpdiv.style.display = 'none'
 }
 const openup = ()=>{
        
        if (ska.value === 'residential') {
            com.style.display = 'none'
            res.style.display = 'block'
-           btn.style.display = 'block'
-          contact.style.display = 'none'
+		   btn.style.display = 'block'
+		   contact.style.display = 'none'
 
        }
        else if (ska.value === 'commercial') {
         com.style.display = 'block'
         res.style.display = 'none'
-        btn.style.display = 'none'
-          contact.style.display = 'none'
-          totaldiv.style.display = 'none'
+		btn.style.display = 'none'
+		 contact.style.display = 'none'
+		 totaldiv.style.display = 'none'
+		   phpdiv.style.display = 'none'
        }
-       
 }
 
 const over = {
